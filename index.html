@@ -5,8 +5,15 @@
         <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/ar.js@3.3.1/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/ar.js@3.3.1/ar.min.js"></script>
+        <style>
+            body { background-color: #222; color: white; margin: 0; }
+            #info { position: absolute; top: 10px; left: 10px; z-index: 100; }
+        </style>
     </head>
     <body style='margin : 0px; overflow: hidden;'>
+        <div id="info">
+            <p>Scan barcode 149 to see the AR content</p>
+        </div>
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4;'>
             <a-marker type='barcode' value='149'>
                 <a-sphere position='0 1 0' color="yellow"></a-sphere>
